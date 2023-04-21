@@ -1,0 +1,53 @@
+html {
+  font-size: 125%;
+}
+
+header {
+	padding: 154px 0 100px;
+}
+
+section {
+	padding: 150px 0;
+}
+
+body {
+	font-family: 'Sniglet', sans-serif;
+	text-align: justify;
+}
+
+h2 {
+	font-family: 'Chewy', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+	font-size: 38px;
+	color: #027B7B;
+}
+
+.mybg-menu {
+    background-color: #8B4B53; 
+}
+
+.mybg-light {
+    background-color: #FFC422;
+}
+.mybg-light .h2 {
+    color: #FFA500;
+}
+
+.mybg-dark {
+    background-color: #FFA500;
+}
+.mybg-dark .h2 {
+    color: #FFC422;
+}
+
+/* 
+Ripe Mango (#FFCC22), Banana Yellow (#FFD93A), Gargoyle Gas (#FFEA47) and Mango Tango (#FF8242).
+Teal (#027B7B), Ripe Mango (#FFC422), Web Orange (#FFA500), Orange (#FF8200) and Deep Ruby (#8B4B53).
+fbe69d
+f57704
+8b7b09
+a17b56
+d86c05
+*/
+

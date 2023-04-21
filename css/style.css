@@ -1,5 +1,5 @@
 html {
-  font-size: 125%;
+  font-size: 150%;
 }
 
 header {
@@ -30,18 +30,18 @@ h2 {
 .mybg-light {
     background-color: #fff0cc;
 }
-.mybg-light .h2 {
-    color: #;
-}
 
 .mybg-dark {
     background-color: #ffdd8a;
 }
+
+/* 
+.mybg-light .h2 {
+    color: #;
+}
 .mybg-dark .h2 {
     color: #;
 }
-
-/* 
 fff0cc, ffdd8a, f68817, 006a2e, c31d1f
 Ripe Mango (#FFCC22), Banana Yellow (#FFD93A), Gargoyle Gas (#FFEA47) and Mango Tango (#FF8242).
 Teal (#027B7B), Ripe Mango (#FFC422), Web Orange (#FFA500), Orange (#FF8200) and Deep Ruby (#8B4B53).

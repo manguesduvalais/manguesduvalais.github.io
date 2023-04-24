@@ -23,6 +23,40 @@ h2 {
 	color: #f68817;
 }
 
+.autohide{
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+.scrolled-down{
+	transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+	transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
+
+#quote-area {
+    position: relative; 
+    border-radius: 20px;
+    color: black;
+    background-color: #ffdd8a; 
+}
+.quote-tri {
+    position: absolute; 
+    width: 0;
+    height: 0; 
+    border: 20px solid; 
+    border-color: transparent transparent #ffdd8a #ffdd8a; 
+    left: 50px; 
+    bottom: 100%;
+    z-index: 1; 
+    display: inline-block; 
+}
+	
 .mybg-menu {
     background-color: #f68817; 
 }
@@ -33,6 +67,12 @@ h2 {
 
 .mybg-dark {
     background-color: #ffdd8a;
+}
+
+#agenda{
+	border-radius: 20px;
+	color: black;
+    background-color: #ffdd8a; 
 }
 
 /* 

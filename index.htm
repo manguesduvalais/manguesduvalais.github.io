@@ -7,15 +7,15 @@
 <meta name="author" content="Papilloud-Germanier fils">
 <title>Mangues du Valais</title>
 
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous'>
-<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">-->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 <link rel="stylesheet" href="css/style.css">
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sniglet|Chewy&display=swap'>
 <!--Dongle,Chewy,Open+Sans,Mali-->
 
-<script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3' crossorigin='anonymous'></script>
+<script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
 
 <!-- Custom fonts
 <script src="https://use.fontawesome.com/releases/vVERSION/js/all.js" data-mutate-approach="sync"></script>
@@ -26,14 +26,67 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
 AOP_Logo.jpg
 -->
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+		el_autohide = document.querySelector('.autohide');
+		// add padding-top to bady (if necessary)
+		navbar_height = document.querySelector('.navbar').offsetHeight;
+		document.body.style.paddingTop = navbar_height + 'px';
+		if(el_autohide){	
+			var last_scroll_top = 0;
+			window.addEventListener('scroll', function() {
+	       		let scroll_top = window.scrollY;
+		       if(scroll_top < last_scroll_top) {
+		            el_autohide.classList.remove('scrolled-down');
+		            el_autohide.classList.add('scrolled-up');
+		        }
+		        else {
+		            el_autohide.classList.remove('scrolled-up');
+		            el_autohide.classList.add('scrolled-down');
+		        }
+		        last_scroll_top = scroll_top;
+
+			}); 
+			// window.addEventListener
+		}
+		// if
+	}); 
+	// DOMContentLoaded  end
+</script>
 </head>
 
 <body id="page-top">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light mybg-menu fixed-top" id="mainNav">
+<!--
+<nav class="autohide navbar navbar-expand-lg navbar-dark bg-primary">
+ <div class="container-fluid">
+ 	 <a class="navbar-brand" href="#">Brand</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+
+	<ul class="navbar-nav ms-auto">
+		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Dropdown right </a>
+		    <ul class="dropdown-menu dropdown-menu-right">
+			  <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+			  <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+		    </ul>
+		</li>
+	</ul>
+
+  </div> 
+ </div> 
+</nav>
+-->
+
+<nav class="autohide navbar navbar-expand-lg navbar-light mybg-menu fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="index.htm"><img height="40px" src="images/manguesVS-small01.png"></a>
+    <a class="navbar-brand js-scroll-trigger" href="index.htm"><img height="50px" src="images/manguesVS-small01.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,7 +112,8 @@ AOP_Logo.jpg
         </li>
       </ul>
     </div>
-    <!--<div class="collapse navbar-collapse" id="navbarResponsive">
+    <!--
+    <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="index.htm"><b>Français</b></a>
@@ -68,7 +122,8 @@ AOP_Logo.jpg
           <a class="nav-link js-scroll-trigger" href="index_NR.htm">Néo-Romanche</a>
         </li>
       </ul>
-    </div>-->
+    </div>
+    -->
   </div>
 </nav>
 
@@ -81,12 +136,20 @@ AOP_Logo.jpg
 		<div class="col-lg-6 mx-auto">
 			<img class="img-fluid mx-auto d-block" src="images/manguesVS01.png">
 			<br>
-			Dans la famille Papilloud-Germanier, on cultive la mangue AOP du Valais depuis 5 générations. 
+			<div id="quote-area">
+		        <blockquote class="blockquote p-3">
+		        <i class="bi bi-quote"></i> Dans la famille Papilloud-Germanier, on cultive la mangue AOP du Valais depuis 5 générations.</blockquote>
+		        <div class="quote-tri"></div>
+		    </div>
 		</div>
 	</div>	
 </div>
 </section>
-
+<!--
+<div id="text" class="d-flex h-100 w-100 justify-content-center align-items-center text-center p-1">
+				Dans la famille Papilloud-Germanier, on cultive la mangue AOP du Valais depuis 5 générations.</div>
+				-->
+				
 <section id="mangue" class="mybg-dark">
 <div class="container">
 	<h2>L'incoutournable Mangue du Valais</h2>
@@ -136,7 +199,7 @@ AOP_Logo.jpg
 	<h2>Boutique et achat en ligne</h2>
 	<div class="row">
 		<div class="col-lg-12 mx-auto">
-		<p>Notre boutique est ouverte les 8 jours de la semaine et nous livrons dans les 7 districts du Valais. Notre shop en ligne accepte les crypto-Farinet et les dinar UBS. Pour tout achat en ligne de moins de 20 lb, nos opossums augmentés livrent votre commande en moins de 24h sur le pas de votre Sas.</p>
+		<p>Notre boutique est ouverte les 8 jours de la semaine et nous livrons dans les 7 districts du Valais. Notre shop en ligne accepte les crypto-Farinet et les dinar UBS. Pour tout achat en ligne de moins de 20 lb, nos koalas augmentés livrent votre commande en moins de 24h sur le pas de votre Sas.</p>
 		</div>
 	</div>
 </div>
@@ -149,25 +212,43 @@ AOP_Logo.jpg
 		<div class="col-lg-12 mx-auto">
 		<p>Nous nous déplaçons dans tous les événements importants de la région pour faire connaître nos produits. N'hésitez pas à venir nous rencontrer à notre stand de vente et dégustation !</p>
 		<p>Calendrier des manifestions:</p> 
-		<ul>
-		<li>Fête de la Mangue à Fully</li>
-		<li>Combats de giraffes d'Hérens: grande finale nationale à Aproz</li>
-		<li>Débat public sur le réaménagement des plages naturistes du Sanetsch</li>
-		<li>Agroscope, Conthey: Parcours didactique pour tout connaître sur la maturation des mangoustaniers adultes</li>
-		<li>CERM, Martigny: Tous les jeudis, karaoké-choucroute hebdomadaire du FC Sion</li>
-		<li>Parc Baobab-Aventures à Evionnaz</li>
-		<li>Promenade en dromadaire au bisse de Savièse</li>
-		<li>Palp Festival: Concerts schlagerpunk et trashcore-yodel dans les locaux désaffectés de l'ancien aéroport de Sembrancher</li>
-		<li>Distribution gratuite de pilules reproductives au Mango-Bango Bar à l'entrée de Martigny</li>
-		<li>Retransmission en direct des nouvelles portées de chiots en direct du musée lunaire du Saint-Bernard</li> 
-		<li>42ème Safari des Marécottes</li>
-		</ul>
 		</div>
 	</div>
 </div>
+
+<div class="container text-center">
+  <div class="row row-cols-3 align-items-center">
+    <div class="col p-2"><div class="p-3" id="agenda">Fête de la Mangue à Fully</div></div>
+    <div class="col"><div class="p-3" id="agenda">42ème Safari des Marécottes</div></div>
+    <div class="col"><div class="p-3" id="agenda">Parc Baobab-Aventures à Evionnaz</div></div>
+    <div class="col p-2"><div class="p-3" id="agenda">Combats de giraffes d'Hérens: grande finale nationale à Aproz</div></div>
+    <div class="col p-2"><div class="p-3" id="agenda">Débat public sur le réaménagement des plages naturistes du Sanetsch</div></div>
+    <div class="col"><div class="p-3" id="agenda">Promenade en dromadaire au bisse de Savièse</div></div>
+    <div class="col p-2"><div class="p-3" id="agenda">Agroscope, Conthey: Parcours didactique pour tout connaître sur la maturation des mangoustaniers adultes</div></div>
+    <div class="col"><div class="p-3" id="agenda">Palp Festival: Concerts schlagerpunk et trashcore-yodel à l'aéroport désaffecté de Sembrancher</div></div>
+    <div class="col"><div class="p-3" id="agenda">Retransmission en direct des nouvelles portées de chiots en direct du musée lunaire du Saint-Bernard</div></div>
+    <div class="col"><div class="p-3" id="agenda">Distribution gratuite de pilules reproductives au Mango-Bango Bar à l'entrée de Martigny</div></div>
+    <div class="col"><div class="p-3" id="agenda">CERM, Martigny: Tous les jeudis, karaoké-choucroute hebdomadaire du FC Sion</div></div>
+  </div>
+</div>
+
 </section>
 
 <!--
+<ul>
+<li>Fête de la Mangue à Fully</li>
+<li>Combats de giraffes d'Hérens: grande finale nationale à Aproz</li>
+<li>Débat public sur le réaménagement des plages naturistes du Sanetsch</li>
+<li>Agroscope, Conthey: Parcours didactique pour tout connaître sur la maturation des mangoustaniers adultes</li>
+<li>CERM, Martigny: Tous les jeudis, karaoké-choucroute hebdomadaire du FC Sion</li>
+<li>Parc Baobab-Aventures à Evionnaz</li>
+<li>Promenade en dromadaire au bisse de Savièse</li>
+<li>Palp Festival: Concerts schlagerpunk et trashcore-yodel dans les locaux désaffectés de l'ancien aéroport de Sembrancher</li>
+<li>Distribution gratuite de pilules reproductives au Mango-Bango Bar à l'entrée de Martigny</li>
+<li>Retransmission en direct des nouvelles portées de chiots en direct du musée lunaire du Saint-Bernard</li> 
+<li>42ème Safari des Marécottes</li>
+</ul>
+		
 Workshop sur la transmission du covid-47 aux charançons des noyaux de mangue</li>
 
 <i class='bi bi-diagram-3'></i><i class='bi bi-diagram-2-fill'></i><i class='bi bi-grid-3x3-gap'></i> 

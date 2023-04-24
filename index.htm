@@ -27,6 +27,7 @@
 AOP_Logo.jpg
 -->
 
+<!--
 <script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", function(){
 		el_autohide = document.querySelector('.autohide');
@@ -54,6 +55,7 @@ AOP_Logo.jpg
 	}); 
 	// DOMContentLoaded  end
 </script>
+-->
 </head>
 
 <body id="page-top">
@@ -82,10 +84,13 @@ AOP_Logo.jpg
   </div> 
  </div> 
 </nav>
+
+autohide
 -->
 
-<nav class="autohide navbar navbar-expand-lg navbar-light mybg-menu fixed-top" id="mainNav">
-  <div class="container">
+<!--
+<nav class="navbar navbar-expand-lg navbar-light mybg-menu fixed-top" id="mainNav">
+  <div class="container-fluid">
     <a class="navbar-brand js-scroll-trigger" href="index.htm"><img height="50px" src="images/manguesVS-small01.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -110,11 +115,9 @@ AOP_Logo.jpg
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#ou">Où nous trouver ?</a>
         </li>
+        
       </ul>
-    </div>
-    <!--
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav navbar-right">
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="index.htm"><b>Français</b></a>
         </li>
@@ -123,8 +126,47 @@ AOP_Logo.jpg
         </li>
       </ul>
     </div>
-    -->
   </div>
+</nav>
+-->
+
+<nav class="navbar navbar-expand-md navbar-light mybg-menu">
+    <div class="container-fluid">
+        <a class="navbar-brand abs" href="#"><img height="50px" src="images/manguesVS-small01.png"></a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapseNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#mangue">Mangue du Valais</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#AOP">Label AOP</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#comment">Comment la déguster ?</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#exploitation">Notre exploitation</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#boutique">La boutique</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="#ou">Où nous trouver ?</a>
+				</li>
+            </ul>
+            <ul class="navbar-nav ms-auto">   
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index.htm"><b>Français</b></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link js-scroll-trigger" href="index_NR.htm">Néo-Romanche</a>
+				</li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <section class="mybg-light">
@@ -139,7 +181,7 @@ AOP_Logo.jpg
 			<div id="quote-area">
 				<div class="row">
 				<div class="col-1"><i class="bi bi-quote" style="color: #f68817; font-size: 300%;"></i></div>
-		        <div class="col-11"><div class="p-3" style="font-size: 120%;">
+		        <div class="col-11"><div class="p-3" style="font-size: 150%;">
 		        Dans la famille Papilloud-Germanier, on cultive la mangue AOP du Valais depuis douze générations.</div></div>
 				</div>
 		        <div class="quote-tri"></div>
@@ -155,10 +197,14 @@ AOP_Logo.jpg
 				
 <section id="mangue" class="mybg-dark">
 <div class="container">
-	<h2>L'incoutournable Mangue du Valais</h2>
-	<div class="row">
-		<div class="col-lg-12 mx-auto">
+	
+	<div class="row align-items-center">
+		<div class="col-lg-9 mx-auto">
+		<h2>L'incoutournable Mangue du Valais</h2>
 		<p>Le long de l'ancien lit du Rhône, de Sierre à Martigny, s’étend le royaume de la mangue – la reine des vergers valaisans. Au total, le Valais compte environ 670 hectares plantés de manguiers, soit une surface équivalente à 940 pistes de roller derby. Le Valais est le plus grand producteur de mangues de Suisse, avec aujourd'hui plus de 70 variétés qui permettent l’étalement de la récolte. Le climat tropical de la pleine du Rhône, avec sa température constante 365 jours par an, est idéale aux manguiers qui produisent ce fruit valaisan au goût inimitable.</p>
+		</div>
+		<div class="col-lg-3">
+		<img class="img-fluid mx-auto d-block p-3" src="images/mangotree-small01.jpg">
 		</div>
 	</div>
 </div>
@@ -167,12 +213,12 @@ AOP_Logo.jpg
 <section id="AOP" class="mybg-light">
 <div class="container">
 	<div class="row align-items-center">
+		<div class="col-lg-3">
+		<img class="img-fluid mx-auto d-block p-3" src="images/AOP_Logo.jpg">
+		</div>
 		<div class="col-lg-9 mx-auto">
 		<h2>Label AOP</h2>
 		<p>Notre label AOP nous distingue des megafactory manguières de la Lonza. L’origine valaisanne, la fraîcheur et la qualité sont garanties par ce label dont les normes sont clairement définies, rejoignant le cercle des produits non-transformés valaisans bénéficant du label AOP-IGP, comme la Goyave Sauvage de Saillon ou l'Ananas de Nax.</p>
-		</div>
-		<div class="col-lg-3">
-		<img class="img-fluid mx-auto d-block p-3" src="images/AOP_Logo.jpg">
 		</div>
 	</div>
 </div>
@@ -192,7 +238,7 @@ AOP_Logo.jpg
 <section id="exploitation" class="mybg-light">
 <div class="container">
 	
-	<div class="row">
+	<div class="row align-items-center">
 		<div class="col-lg-3">
 		<img class="img-fluid mx-auto d-block p-3" src="images/holding-mango-small01.jpg">
 		</div>
